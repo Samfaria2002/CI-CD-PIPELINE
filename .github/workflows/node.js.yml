@@ -43,7 +43,8 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
-    - run: cd ./frontend && ls && npm install
+    - run: cd ./frontend && npm install
+    - run: cd ./frontend && npm install @angular/cli
     #- run: npm install
     #- run: npm install @angular/cli
     #- run: ng test --browsers=ChromeHeadless --watch=false
