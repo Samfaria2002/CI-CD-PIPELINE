@@ -27,7 +27,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
-    - run: cd ./backend && npm install && npm test
+    - run: cd ./backend && ls && npm install && npm test
     
   frontend:
     runs-on: ubuntu-latest
