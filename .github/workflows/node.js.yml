@@ -27,8 +27,9 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
-    - run: cd backend && npm install
-    - run: cd backend && npm test
+    - run: cd backend
+    - run: npm ci
+    - run: npm test 
     
   frontend:
     runs-on: ubuntu-latest
@@ -44,5 +45,6 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
-    - run: cd frontend && npm install
-    - run: cd frontend && npm test
+    - run: cd frontend
+    - run: npm ci
+    - run: npm test
