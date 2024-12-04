@@ -26,10 +26,8 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
-    - name: Instala Dependencias
-      run: cd backend && npm install
 
-    - name: Roda testes
+    - run: cd backend && npm install
     - run: cd backend && npm test
     
   frontend:
@@ -46,8 +44,5 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
-    - name: Instala dependencias
     - run: cd frontend && npm install
-    
-    - name: Rodar testes
     - run: cd frontend && npm test
