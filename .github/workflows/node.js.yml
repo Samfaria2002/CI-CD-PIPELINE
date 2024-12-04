@@ -45,6 +45,4 @@ jobs:
 
     - run: cd ./frontend && npm install
     - run: cd ./frontend && npm install @angular/cli
-    #- run: npm install
-    #- run: npm install @angular/cli
-    #- run: ng test --browsers=ChromeHeadless --watch=false
+    - run: cd ./frontend && ng test --browsers=ChromeHeadless --watch=false
